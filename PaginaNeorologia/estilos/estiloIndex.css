@@ -30,7 +30,7 @@ main {
    background-color: transparent;
    border: none;
    cursor: pointer;
-   padding: 10px;
+   padding: 5px 10px;
    box-sizing: border-box;
 
    transition: background-color .3s;
@@ -55,6 +55,7 @@ main {
 .textos {
    width: 95%;
    text-align: justify;
+   font-size: 1em;
 }
 
 #ImagemUser {
@@ -67,6 +68,7 @@ main {
    border: none;
    background-color: var(--cor1);
    color: var(--cor2);
+   font-size: 1.1em;
 
    transition: background-color .3s;
 }
@@ -79,6 +81,7 @@ main {
 #SaberMais {
    text-decoration: none;
    color: var(--cor5);
+   font-size: 1.1em;
 
    transition: .3s;
 }
@@ -88,7 +91,7 @@ main {
    transition: .3s;
 }
 
-.botao-conteiner {
+#botao-conteiner {
    display: flex;
    flex-flow: row nowrap;
    justify-content: center;
@@ -133,7 +136,11 @@ main {
    bottom: 30px;
 }
 
-
+@media screen and (max-width: 700px) {
+   .textos {
+      font-size: 3.1vw;
+   }
+}
 
 @media screen and (min-width: 875px) {
    main {
