@@ -1,0 +1,149 @@
+@import url('base.css');
+
+
+/* Configurações global */
+main {
+   display: grid;
+   grid-template-columns: 100vw;
+   grid-template-areas: 
+      "AreaSobrePessoa"
+      "AreaDoQueE"
+   ;
+   font-size: 1em;
+
+
+   /* Tirar depois */
+   /* overflow: hidden; */
+}
+
+.botaoConsultas {
+   width: 300px;
+   background-color: var(--cor4);
+   text-align: center;
+   overflow: hidden;
+   border-radius: 10px;
+   outline: none;
+}
+.botaoConsultas > button {
+   width: 50%;
+   color: var(--cor2);
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   padding: 10px;
+   box-sizing: border-box;
+
+   transition: background-color .3s;
+}
+.botaoConsultas > button:hover {
+   color: white;
+   background-color: var(--cor5);
+
+   transition: background-color .3s;
+}
+
+
+.conteineres-principais {
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 30px;
+   padding-top: 15px;
+}
+
+.textos {
+   width: 95%;
+   text-align: justify;
+}
+
+#ImagemUser {
+   border-radius: 50%;
+}
+
+#botaoAgendar {
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   background-color: var(--cor1);
+   color: var(--cor2);
+
+   transition: background-color .3s;
+}
+#botaoAgendar:hover {
+   background-color: var(--cor5);
+
+   transition: background-color .3s;
+}
+
+#SaberMais {
+   text-decoration: none;
+   color: var(--cor5);
+
+   transition: .3s;
+}
+#SaberMais:hover {
+   color: var(--cor1);
+
+   transition: .3s;
+}
+
+.botao-conteiner {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+}
+
+/* Configurações para a caixa sobre a pessoa */
+#SobreAPessoa {
+   grid-area: AreaSobrePessoa;
+   background-color: #fbfbfb;
+   height: 100vh;
+   position: relative;
+}
+
+
+#SobreAPessoa > #botao-conteiner {
+   position: absolute;
+   bottom: 30px;
+}
+
+
+
+
+/* Configurações para a caixa do que se trata Neurológica */
+#OQueE {
+   grid-area: AreaDoQueE;
+   background: white url('../imagens/pessoaNoComputador.jpg') right bottom no-repeat;
+   background-size: 155%;
+   height: 100vh;
+   position: relative;
+}
+
+#OQueE > #textoSobreOQueE {
+   color: var(--cor2);
+   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.32);
+}
+
+
+#OQueE > .botao-conteiner {
+   position: absolute;
+   bottom: 30px;
+}
+
+
+
+@media screen and (min-width: 875px) {
+   main {
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas: 
+         "AreaDoQueE AreaSobrePessoa" 
+      ;
+   }
+
+   #BotaoAgendarOQueE, #SaberMais {
+      display: none;
+   }
+}
