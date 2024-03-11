@@ -10,14 +10,19 @@
 <body>
    <main>
       <section id="SobreAPessoa" class="conteineres-principais">
-         <aside class="botaoConsultas">
-            <button>Admin</button><button>Minhas Consultas</button>
-         </aside>
-         <img src="imagens/UserPNG.png" alt="Foto" id="ImagemUser">
+         <div id="conteiner-sobre">
+            <aside class="botaoConsultas">
+               <button>Admin</button><button><a href="MinhaConsulta.html">Minhas Consultas</a></button>
+            </aside>
+            <img src="imagens/UserPNG.png" alt="Foto" id="ImagemUser">
+            <h2>Nome Sobrenome</h2>
+         </div>
+
+
          <p class="textos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium quas, repudiandae neque autem, totam vero quis alias pariatur rem quod voluptatem, eaque nemo aperiam quasi debitis ea fugit. At? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, distinctio ab incidunt veritatis doloribus tenetur non quibusdam cumque magni illo. Expedita doloribus obcaecati id laudantium voluptatum. Numquam reiciendis ea cumque.</p>
 
          <div id="botao-conteiner">
-            <button id="botaoAgendar">Agendar</button>
+            <button id="botaoAgendar" onclick="MandarParaLink()">Agendar</button>
             <a href="#OQueE" id="SaberMais">Saber mais &darr;</a>
          </div>
       </section>
@@ -27,9 +32,14 @@
          <p class="textos" id="textoSobreOQueE">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur laudantium quas, repudiandae neque autem, totam vero quis alias pariatur rem quod voluptatem, eaque nemo aperiam quasi debitis ea fugit. At? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, distinctio ab incidunt veritatis doloribus tenetur non quibusdam cumque magni illo. Expedita doloribus obcaecati id laudantium voluptatum. Numquam reiciendis ea cumque. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae tempore enim aut incidunt natus nisi eaque illum velit placeat iste! Repellendus, sapiente voluptate repudiandae earum iure minus omnis quasi corrupti.</p>
 
          <div class="botao-conteiner" id="BotaoAgendarOQueE">
-            <button id="botaoAgendar">Agendar</button>
+            <button id="botaoAgendar" onclick="MandarParaLink()">Agendar</button>
          </div>
       </section>
    </main>
+   <script>
+      function MandarParaLink() {
+         window.location.href = './formularioDeAgendamento.html';
+      }
+   </script>
 </body>
 </html>

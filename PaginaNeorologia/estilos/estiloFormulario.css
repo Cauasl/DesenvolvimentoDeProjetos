@@ -1,0 +1,83 @@
+@import url('base.css');
+
+main {
+   background-color: var(--cor3);
+   height: 100vh;
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+}
+
+#conteiner-form {
+   width: 100vw;
+   height: 600px;
+   padding: 10px;
+   border-radius: 0px;
+   background-color: var(--cor2);
+   box-shadow: 0px 0px 8px #00000040;
+}
+
+hr {
+   margin: 20px 0px;
+}
+
+a {
+   color: var(--cor4);
+   text-decoration: none;
+   font-weight: bold;
+   transition: color .3s;
+}
+a:hover {
+   color: var(--cor1);
+   transition: color .3s;
+}
+
+#conteiner-form > form {
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 30px;
+   padding: 5px 0px;
+}
+
+#NomeEEmail input[name="nomeemail"] {
+   width: 200px;
+   height: 35px;
+   margin-bottom: 5px;
+   outline: none;
+   border-radius: 5px;
+   border: 1px solid var(--cor1);
+   padding: 5px;
+}
+
+.pergunta {
+   font-size: 1.2em;
+   font-weight: bold;
+   color: var(--cor1);
+}
+
+#Enviar {
+   height: 35px;
+   background-color: var(--cor1);
+   border: 2px solid var(--cor5);
+   border-radius: 10px;
+   color: var(--cor2);
+   font-weight: bold;
+   font-size: 1.05em;
+}
+
+#horarios {
+   width: 90%;
+   height: 120px;
+   background-color: var(--cor3);
+   border: 1px solid var(--cor5);
+   border-radius: 10px;
+   margin: auto;
+}
+
+@media screen and (min-width: 769px) {
+   #conteiner-form {
+      width: 600px;
+      border-radius: 10px;
+   }
+}

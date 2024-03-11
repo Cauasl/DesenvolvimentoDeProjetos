@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Consulta Neurológica - Agendar</title>
+   <link rel="stylesheet" href="estilos/estiloFormulario.css">
+   <link rel="shortcut icon" href="imagens/iconsite.png" type="image/x-icon">
+</head>
+<body>
+   <main>
+      <section id="conteiner-form">
+         <h1>Sobre a consulta</h1>
+         <p><a href="index.html">Voltar</a></p>
+         <hr>
+         <form action="" method="POST" autocomplete="on">
+            <div id="NomeEEmail">
+               <p><input type="text" name="nomeemail" id="" placeholder="Nome e Sobrenome" autocomplete="name"></p>
+               <p><input type="email" name="nomeemail" id="" placeholder="Email" autocapitalize="email"></p>
+            </div>
+
+            <div id="OQueVCTem">
+               <p class="pergunta">O que você tem?</p>
+               <p>
+                  <input type="radio" name="selecao" id="tdah">
+                  <label for="tdah">TDAH</label>
+                  <input type="radio" name="selecao" id="nsei">
+                  <label for="nsei">Não Sei</label>
+               </p>
+            </div>
+
+            <div id="Consulta">
+               <p class="pergunta">Vai ser?</p>
+               <p>
+                  <input type="radio" name="Consulta" id="presencial">
+                  <label for="presencial">Presencial</label>
+
+                  <input type="radio" name="Consulta" id="online">
+                  <label for="online">Online</label>
+               </p>
+            </div>
+
+            <p><input type="date" id="dataDaConsulta"></p>
+
+            <input type="submit" id="Enviar" value="Enviar">
+         </form>
+
+         <section id="horarios">
+            <p>Horarios</p>
+            <div>
+               19:30
+            </div>
+         </section>
+      </section>
+   </main>
+</body>
+</html>

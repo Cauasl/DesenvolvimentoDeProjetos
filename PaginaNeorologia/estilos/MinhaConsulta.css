@@ -1,0 +1,40 @@
+@import url('base.css');
+
+main {
+   background-color: var(--cor3);
+   height: 100vh;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#conteiner-consulta {
+   background-color: var(--cor2);
+   padding: 20px;
+   border-radius: 10px;
+   width: 80vw;
+   box-shadow: 0px 0px 8px #0000005a;
+   text-align: center;
+}
+
+#conteiner-consulta p {
+   font-size: 1.1em;
+}
+
+#conteiner-consulta a {
+   color: var(--cor5);
+   text-decoration: none;
+   font-weight: bold;
+   transition: color .3s;
+}
+#conteiner-consulta a:hover {
+   color: var(--cor1);
+   transition: color .3s;
+}
+
+@media screen and (min-width: 769px) {
+   #conteiner-consulta {
+      width: 600px;
+   }
+}
