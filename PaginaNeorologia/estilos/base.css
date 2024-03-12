@@ -13,4 +13,17 @@
    --cor3: #a8dadc;
    --cor4: #457b9d;
    --cor5: #1d3557;
+
+   --cor2MaisEscuro: #ecf4eb;
+}
+
+a#voltar {
+   color: var(--cor4);
+   text-decoration: none;
+   font-weight: bold;
+   transition: color .3s;
+}
+a#voltar:hover {
+   color: var(--cor1);
+   transition: color .3s;
 }

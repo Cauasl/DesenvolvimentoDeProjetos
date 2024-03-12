@@ -22,17 +22,6 @@ hr {
    margin: 20px 0px;
 }
 
-a {
-   color: var(--cor4);
-   text-decoration: none;
-   font-weight: bold;
-   transition: color .3s;
-}
-a:hover {
-   color: var(--cor1);
-   transition: color .3s;
-}
-
 #conteiner-form > form {
    display: flex;
    flex-flow: column nowrap;

@@ -6,17 +6,18 @@
    <title>Consulta Neurológica - Agendar</title>
    <link rel="stylesheet" href="estilos/estiloFormulario.css">
    <link rel="shortcut icon" href="imagens/iconsite.png" type="image/x-icon">
+   <script type="module" src="code/form.js" defer></script>
 </head>
 <body>
    <main>
       <section id="conteiner-form">
          <h1>Sobre a consulta</h1>
-         <p><a href="index.html">Voltar</a></p>
+         <p><a id="voltar" href="index.html">Voltar</a></p>
          <hr>
-         <form action="" method="POST" autocomplete="on">
+         <form action="" method="POST" id="Formulario" autocomplete="on">
             <div id="NomeEEmail">
-               <p><input type="text" name="nomeemail" id="" placeholder="Nome e Sobrenome" autocomplete="name"></p>
-               <p><input type="email" name="nomeemail" id="" placeholder="Email" autocapitalize="email"></p>
+               <p><input type="text" name="nomeemail" id="Nome" placeholder="Nome e Sobrenome" autocomplete="name"></p>
+               <p><input type="email" name="nomeemail" id="Email" placeholder="Email" autocomplete="email"></p>
             </div>
 
             <div id="OQueVCTem">

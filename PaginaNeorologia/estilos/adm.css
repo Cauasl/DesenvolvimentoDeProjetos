@@ -1,0 +1,113 @@
+@import url('base.css');
+
+body {
+   background-color: var(--cor3);
+
+   display: grid;
+   grid-template-columns: 1fr;
+   align-items: start;
+   gap: 15px;
+   grid-template-areas: 
+      "Titulo"
+      "EspacoConteinerLista"
+      "EspacoConteinerDados"
+   ;
+}
+
+#titulo {
+   grid-area: Titulo;
+   padding: 10px;
+   color: var(--cor1);
+}
+
+#espaco-conteiner-lista,
+#espaco-conteiner-dados {
+   border-radius: 0px;
+}
+
+/* Espaço para conter os elementos filhos */
+#espaco-conteiner-lista {
+   grid-area: EspacoConteinerLista;
+   box-shadow: 0px 0px 8px #0000007e;
+}
+
+/* Estilo do conteiner e da lista */
+#conteiner-lista {
+   background-color: var(--cor2);
+   padding: 10px;
+}
+#conteiner-lista > ul {
+   border: 1px solid var(--cor1);
+   list-style: none;
+   border-radius: 10px;
+   overflow-x: hidden;
+   overflow-y: auto;
+   height: 450px;
+}
+#conteiner-lista > ul > li {
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px 3px;
+   cursor: pointer;
+}
+#conteiner-lista > ul > li:nth-child(even) {
+   background-color: var(--cor2MaisEscuro);
+}
+#conteiner-lista > ul > li:hover {
+   background-color: var(--cor3);
+}
+
+
+
+
+
+
+
+
+/* Espaço para conter os elementos filhos */
+#espaco-conteiner-dados {
+   grid-area: EspacoConteinerDados;
+   box-shadow: 0px 0px 8px #0000007e;
+}
+
+#conteiner-dados {
+   background-color: var(--cor2);
+   padding: 10px;
+}
+
+#dadosPaciente {
+   border: 1px solid var(--cor1);
+   border-radius: 10px;
+   margin-bottom: 15px;
+   padding: 3px 5px 10px 5px;
+}
+#dadosPaciente > #dadosPessoaisDoPaciente {
+   margin-bottom: 30px;
+}
+
+#HoraDia {
+   border: 1px solid var(--cor1);
+   border-radius: 10px;
+   padding: 5px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+   body {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      grid-template-areas: 
+         "Titulo ."
+         "EspacoConteinerLista EspacoConteinerDados"
+      ;
+   }
+
+   #espaco-conteiner-lista,
+   #espaco-conteiner-dados {
+      border-radius: 20px;
+      overflow: hidden;
+   }
+}
