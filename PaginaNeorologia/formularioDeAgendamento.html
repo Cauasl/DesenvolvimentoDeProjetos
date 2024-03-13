@@ -25,7 +25,7 @@
                <p>
                   <input type="radio" name="selecao" id="tdah">
                   <label for="tdah">TDAH</label>
-                  <input type="radio" name="selecao" id="nsei">
+                  <input type="radio" name="selecao" checked id="nsei">
                   <label for="nsei">Não Sei</label>
                </p>
             </div>
@@ -36,7 +36,7 @@
                   <input type="radio" name="Consulta" id="presencial">
                   <label for="presencial">Presencial</label>
 
-                  <input type="radio" name="Consulta" id="online">
+                  <input type="radio" name="Consulta" checked id="online">
                   <label for="online">Online</label>
                </p>
             </div>
@@ -46,12 +46,16 @@
             <input type="submit" id="Enviar" value="Enviar">
          </form>
 
-         <section id="horarios">
-            <p>Horarios</p>
-            <div>
-               19:30
-            </div>
-         </section>
+         <select id="horarios" size="10">
+            <option value="08:30">08:30</option>
+            <option value="09:30">09:30</option>
+            <option value="10:30">10:30</option>
+            <option value="11:30">11:30</option>
+            <option value="12:30">12:30</option>
+            <option value="13:30">13:30</option>
+            <option value="14:30">14:30</option>
+            <option value="15:30">15:30</option>
+         </select>
       </section>
    </main>
 </body>

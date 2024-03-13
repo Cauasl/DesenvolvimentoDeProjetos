@@ -3,16 +3,21 @@ import { AcessarAPI } from './modulo.js';
 function EvitarEnvio(evento) {
    const nomeP = document.getElementById('Nome').value;
    const emailP = document.getElementById('Email').value;
+   const pacienteTem = document.querySelector('[name="selecao"]:checked');
+   const consulta = document.querySelector('[name="Consulta"]:checked');
+   const diaConsulta = document.getElementById('dataDaConsulta').value;
+   const horaConsulta = document.getElementById('horarios').value;
 
-
-   AcessarAPI('POST', true, {
+   AcessarAPI('PUT', true, {
       nome: nomeP,
-      email: emailP
+      email: emailP,
+      hora: horaConsulta,
+      tem: pacienteTem.id,
+      OP: consulta.id,
+      data: diaConsulta
    });
-
-   AcessarAPI('GET', false).then(function(dado) {
-      console.log(dado);
-   })
    evento.preventDefault();
 }
-document.getElementById('Formulario').addEventListener('submit', EvitarEnvio);
+(function() {
+   document.getElementById('Formulario').addEventListener('submit', EvitarEnvio);
+})()

@@ -13,12 +13,12 @@ const PegarHoraMinuto = (num) => {
    return String(hh) + ':' + String(mm);
 }
 
-AcessarAPI('GET', false)
+AcessarAPI('GET')
    .then(function(dados) {
       console.log(dados);
 
       for(var i = 0; i < dados.record.length; i++) {
-         OpcaoDaLista('ulLista', dados.record[i].nome, PegarHoraMinuto(i), dados.record[i].email)
+         OpcaoDaLista('ulLista', dados.record[i].nome, dados.record[i].hora, dados.record[i].email, dados.record[i].tem, dados.record[i].OP, dados.record[i].data);
       }
    })
    .catch(function(err) {
