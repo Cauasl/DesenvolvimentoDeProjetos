@@ -1,18 +1,5 @@
 import { AcessarAPI, OpcaoDaLista } from './modulo.js';
 
-const PegarHoraMinuto = (num) => {
-   const hmDate = new Date();
-   let hh = hmDate.getHours() + num;
-   let mm = hmDate.getMinutes();
-   if(hh > 23 || hh < 10) {
-      hh = `0${num}`; 
-   }
-   if(mm < 10) {
-      mm = `0${hmDate.getMinutes()}`
-   }
-   return String(hh) + ':' + String(mm);
-}
-
 AcessarAPI('GET')
    .then(function(dados) {
       console.log(dados);
@@ -23,4 +10,4 @@ AcessarAPI('GET')
    })
    .catch(function(err) {
       console.log(err);
-   })
+   });

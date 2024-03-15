@@ -38,3 +38,47 @@ main {
       width: 600px;
    }
 }
+
+
+#conteiner-vizualizacaoDaConsulta {
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 18px;
+}
+
+#conteiner-vizualizacaoDaConsulta > .vizualizacaoDaConsulta {
+   text-align: left;
+}
+
+#conteiner-vizualizacaoDaConsulta p#nomePaciente {
+   font-size: 1.5em;
+}
+
+#conteiner-vizualizacaoDaConsulta p#emailPaciente {
+   font-size: 1.2em;
+}
+
+#conteiner-vizualizacaoDaConsulta p {
+   font-size: .8em;
+}
+#conteiner-vizualizacaoDaConsulta > div.vizualizacaoDaConsulta:nth-of-type(3) > p {
+   font-size: 1em;
+   padding-bottom: 3px;
+}
+
+div#conteiner-reagenda {
+   align-self: flex-end;
+}
+
+div#conteiner-reagenda > button {
+   padding: 5px;
+   background-color: var(--cor2);
+   border: 2px solid var(--cor1);
+   border-radius: 10px;
+}
+div#conteiner-reagenda > button:nth-of-type(2) {
+   background-color: var(--cor1);
+   color: var(--cor2);
+}

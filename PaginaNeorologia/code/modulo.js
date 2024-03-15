@@ -1,3 +1,5 @@
+
+//#region API e Criação das caixas
 export async function AcessarAPI(methodHTTP, mostrarConsole=false, obj={}) {
    const CHAVE_MESTRA = '$2a$10$wKuTiJNymyadlf01.ZE9QObiWCg/.952W5qET2eiu3y1CipwZ0Qqu';
    const CHAVE_PACIENTES = '$2a$10$xqhaeYD4.uA5krjdoDhnUOZKOMFf9KlddHYUpd.nWdwJ0Ceb9USO2';
@@ -49,9 +51,6 @@ export async function AcessarAPI(methodHTTP, mostrarConsole=false, obj={}) {
    }
 }
 
-
-
-
 export function OpcaoDaLista(idDaLista, Nome, hora, Email, tem, op, data) {
    const li = document.createElement('li');
    const NomePaciente = document.createElement('span');
@@ -75,3 +74,18 @@ export function OpcaoDaLista(idDaLista, Nome, hora, Email, tem, op, data) {
    li.appendChild(Horario);
       Horario.innerText = hora;
 }
+//#endregion
+
+export function MeuBiscoito(metodo='GET', nomeBis='', valor='') {
+   switch(metodo) {
+      case 'SET':
+         document.cookie = nomeBis + '=' + valor + ';';
+         return String(valor);
+      break;
+
+      case 'GET':
+         return document.cookie;
+      break;
+   }
+}
+
